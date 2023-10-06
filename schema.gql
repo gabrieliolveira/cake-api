@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Cake {
+  """Cakes"""
+  id: Int!
+}
+
+type Query {
+  cake(id: Int!): Cake!
+}
+
+type Mutation {
+  createCake(createCakeInput: CreateCakeInput!): Cake!
+  updateCake(updateCakeInput: UpdateCakeInput!): Cake!
+  removeCake(id: Int!): Cake!
+}
+
+input CreateCakeInput {
+  id: Int!
+  battle: String!
+  topping: String!
+}
+
+input UpdateCakeInput {
+  id: Int!
+  battle: String
+  topping: String
+}

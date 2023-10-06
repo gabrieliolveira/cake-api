@@ -1,0 +1,15 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "darwin", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Cakes{
+  id             Int       @id @default(autoincrement())
+  battle           String    @db.VarChar(30)
+  topping              String    @db.VarChar(30)
+}
